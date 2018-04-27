@@ -1,0 +1,16 @@
+.row{
+	margin-top: 20px;
+}
+.col{
+	text-align: center;
+	padding: 10px;
+}
+nav{
+	background-color: #046888;
+}
+button{
+	background-color: #43b0ba;
+}
+a{
+	font-style: none;
+}
