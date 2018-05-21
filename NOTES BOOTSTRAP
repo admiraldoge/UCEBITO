@@ -1,0 +1,30 @@
+NOTES BOOTSTRAP
+d-block for show the content
+s-sm-none oculta el contenido
+container-fluid para que ocupe el 100%
+<small> texto mas pequeño
+class text-muted añade un color mas opaco
+class h1--6 tamaño del h1--6
+class display-(1-4) encabezado mas delgado
+class lead Resalta un parrafo
+<mark> resalta el texto
+<del> tacha el texto
+<ins> subrayar
+<strong> negrita
+<em> cursiva
+class text-justify justifica el texto
+class card 
+class card-body card-block
+class w-100 añade un div de tamaño 100%
+class text-left
+class text-center
+class text-right
+text-sm-right a partir de small en adelante hacia la derecha
+class uppercase lowercase capitalize
+class font-weight-bold font-weight-normal font-weight-italic
+blockquote <p> class blockquote FRASE
+class mb-0 quita los padding
+blockquote-footer blockquote-reverse 
+<code> codigo en linea 
+<pre> <code>
+<kvd> resalta teclas especiales
