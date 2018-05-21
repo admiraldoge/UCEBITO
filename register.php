@@ -2,6 +2,7 @@
 include_once "header.php";
 include_once "includes/register.inc.php";
 ?>
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<?php display_message(); ?>
@@ -78,6 +79,7 @@ include_once "includes/register.inc.php";
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+</div>
 <script>
 	var password = document.getElementById("password")
 	, confirm_password = document.getElementById("confirm_password");

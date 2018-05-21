@@ -4,10 +4,20 @@ include_once "includes/login.inc.php";
 
 if(logged_in()) {
     redirect("usuario.php");
+    $_SESSION['email'] = $email;
+    $nq="SELECT tipo FROM usuario WHERE usuario.email='$email' and usuario.tipo='estudiante'";
+    $result2 = $conn->query($nq);
+    if($result2->num_rows==1){
+        redirect("usuario.php");
+    }else{
+        redirect("admin.php");
+    }
 }
 ?>
-<div class="container justify-content-center">
+<div class="container">
+
     <?php display_message(); ?>
+    <div class="row justify-content-center">
     <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
         <div class="panel panel-info" >
             <div class="panel-heading">
@@ -57,7 +67,7 @@ if(logged_in()) {
         </div>  
     </div>
 </div>
-
+</div>
 <?php
 include_once "footer.php";
 ?>

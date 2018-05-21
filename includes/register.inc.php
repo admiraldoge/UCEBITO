@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	$last_name				= $_POST['last_name'];
 	$display_name			= $_POST['display_name'];
 	$email					= $_POST['email'];
-	$password				= md5($_POST['password']);
+	$password				= $_POST['password'];
 	$confirm_password		= $_POST['confirm_password'];
 
 	$errors = [];
@@ -20,8 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 			validation_errors($error);
 		}
 	}else{
-		$sql = "INSERT INTO member (first_name, last_name, display_name, email, password, date_added)
-		VALUES ('$first_name', '$last_name', '$display_name', '$email', '$password', now())";
+		$sql = "INSERT INTO usuario (nombre,apellido,nick, email,clave,creacion,tipo)
+		VALUES ('$first_name', '$last_name', '$display_name', '$email', '$password', now(),'estudiante')";
 
 		if ($conn->query($sql) === TRUE) {
 			redirect("index.php");

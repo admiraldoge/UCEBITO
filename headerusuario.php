@@ -22,9 +22,9 @@ include_once "includes/init.php";
 	<div class="container">
 		<nav class="navbar-expand-lg navbar-dark navbar-fixed-top navbar-custom" id="mainNav">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-center">
 				<div class="col-5 columna">
-					<a class="navbar-brand" href="#page-top">UCBITO JUEZ VIRTUAL</a>
+					<a class="navbar-brand" href="usuario.php"><img src="img/logo2.png" height="50"></a>
 				</div>
 				<div class="col-7 columna">
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,13 +33,21 @@ include_once "includes/init.php";
 					<div class="collapse navbar-collapse" id="navbarResponsive">
           				<ul class="navbar-nav ml-auto">
             			<li class="nav-item">
-              				<a class="nav-link js-scroll-trigger" href="#problems">Problemas</a>
+              				<a class="nav-link js-scroll-trigger" href="#problems"><h5>Problemas</h5></a>
             			</li>
             			<li class="nav-item">
-              				<a class="nav-link js-scroll-trigger" href="enter.php">Perfil</a>
+              				<a class="nav-link js-scroll-trigger" href="enter.php">
+              					<h5>
+              					<?php
+              						echo get_name($_SESSION['email']);
+              					?>
+              					</h5>
+              				</a>
             			</li>
             			<li class="nav-item">
+            				<h5>
               				<a class="nav-link js-scroll-trigger" href="logout.php">Salir</a>
+              				</h5>
             			</li>
           				</ul>
         			</div>

@@ -24,7 +24,7 @@ include_once "includes/init.php";
 		<div class="container">
 			<div class="row">
 				<div class="col-5 columna">
-					<a class="navbar-brand" href="#page-top">UCBITO JUEZ VIRTUAL</a>
+					<a class="navbar-brand" href="admin.php"><img src="img/logo2.png" height="50"></a>
 				</div>
 				<div class="col-7 columna">
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,11 @@ include_once "includes/init.php";
               				<a class="nav-link js-scroll-trigger" href="#problems">Crear</a>
             			</li>
             			<li class="nav-item">
-              				<a class="nav-link js-scroll-trigger" href="enter.php">Perfil</a>
+              				<a class="nav-link js-scroll-trigger" href="enter.php">
+              					<?php
+              						echo get_name($_SESSION['email']);
+              					?>
+              				</a>
             			</li>
             			<li class="nav-item">
               				<a class="nav-link js-scroll-trigger" href="logout.php">Salir</a>
